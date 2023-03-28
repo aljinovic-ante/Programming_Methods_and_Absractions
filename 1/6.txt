@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int pet=0,dva=0,jedan=0;
+    int ostatak;
+    int kn;
+    
+    printf("unesite broj kn:\n");
+    scanf("%d",&kn);
+    ostatak=kn;
+    
+    while (1==1)
+    {
+        pet=ostatak/5;
+        ostatak=ostatak%5;
+        dva=ostatak/2;
+        ostatak=ostatak-(dva*2);
+        if (ostatak==1)
+            {
+            jedan+=1;
+            break;
+            }
+        else
+            break;
+        
+    }
+    
+    printf("od 5: %d, od 2: %d, od 1:%d ",pet,dva,jedan);
+    
+    return 0;
+}

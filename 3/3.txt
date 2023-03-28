@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int provjera(int i)
+{
+    int brojac=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+            {
+            brojac++;
+            break;
+            }
+    }
+    
+    if(brojac==0) 
+        return 1;
+    else
+        return 0;
+}
+
+int prost(int n)
+{
+    for(int i=n;i<n+i;i++)
+    {
+        if(provjera(i))
+            return i;
+        else
+            continue;
+    }
+}
+
+int main()
+{
+    int n=19;
+    int slj;
+    slj=prost(n+1);
+    printf("slj prosti broj je %d",slj);
+}

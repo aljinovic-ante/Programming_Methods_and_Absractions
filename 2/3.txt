@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,m,n;
+    int i;
+    int suma=0;
+    printf("unesi interval:\n");
+    scanf("%d %d",&a,&b);
+    printf("Unesi brojeve m i n:\n");
+    scanf("%d %d",&m,&n);
+    
+    
+    for(i=a;i<=b;i++)
+        {
+            if (i%m==0 && i%n==0)
+                {
+                    printf("FizzBuzz, %d \n",i);
+                }
+            else if(i%m==0)
+                {
+                    printf("Fizz, %d \n",i);
+                }
+            else if(i%n==0)
+                {
+                    printf("Buzz, %d \n",i);
+                }
+        }
+}

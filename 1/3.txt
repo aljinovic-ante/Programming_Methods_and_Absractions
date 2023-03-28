@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int broj;
+    int test;
+    int ostatak;
+    int rez=0;
+    
+    printf("unesite troznam. broj:\n");
+    scanf("%d",&broj);
+    
+    test=broj;
+    
+    while (test!=0)
+    {
+        ostatak=test%10;
+        rez=rez+(ostatak*ostatak*ostatak);
+        
+        test=test/10;
+        
+    }
+    
+    if (rez==broj)
+        printf("to je armstrongov broj\n");
+    else
+        printf("nije armstrongov broj\n");
+
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int brojac=0;
+    short broj;
+    printf("koliko brojeva zelite unit?\n");
+    scanf("%d",&n);
+    
+    do
+    {
+        printf("unesite neki broj:\n");
+        scanf("%hd",&broj);
+        if((broj<65 || broj>90) && broj>0)
+                printf("X\n");
+        else if(broj<0)
+                printf(":\n");
+        else
+            printf("%c\n",broj);
+        brojac++;
+                
+        
+    }while(brojac<=n);
+    
+}

@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main()
+{
+	char i, p, pi, pp, zi, zp;
+	do {
+		printf("unesite ime:\n");
+		scanf_s(" %c", &i);
+		printf("unesite prezime:\n");
+		scanf_s(" %c", &p);
+
+		if (((i < 65 || i>90) && (i != '0')) || ((p < 65 || p>90) && (p != '0')))
+			printf("pogreska\n");
+		else
+			break;
+	} while (1 == 1);
+	pi = i;
+	zi = i;
+	pp = p;
+	zp = p;
+	while (1 == 1)
+		{
+		do {
+			printf("unesite ime:\n");
+			scanf_s(" %c", &i);
+			printf("unesite prezime:\n");
+			scanf_s(" %c", &p);
+
+			if (((i < 65 || i>90) && (i != '0')) || ((p < 65 || p>90) && (p != '0')))
+				printf("pogreska\n");
+			else
+				break;
+		} while (1 == 1);
+		if ((i == '0') || (p == '0'))
+			break;
+		if (pp > p)
+		{
+			pp = p;
+			pi = i;
+		}
+		else if (pp == p)
+		{
+			if (pi > i)
+			{
+				pi = i;
+				pp = p;
+			}
+		}
+		if (zp < p)
+		{
+			zp = p;
+			zi = i;
+		}
+		else if (zp == p)
+		{
+			if (zi > i)
+			{
+				zi = i;
+				zp = p;
+			}
+		}
+		}
+	printf("inicijali prvog po redu su: %c %c, a zadnjeg: %c %c", pi, pp, zi, zp);
+	return 0;
+}

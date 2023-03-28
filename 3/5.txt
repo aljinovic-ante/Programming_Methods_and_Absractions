@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int uvecan(int broj)
+{
+    int novibroj=0;
+    int brojka;
+    int brojac=1;
+    
+    while(broj>0)
+    {
+        brojka=broj%10;
+        broj=broj/10;
+        if (brojka==9)
+            brojka=0;
+        else
+            brojka++;
+        
+        novibroj=novibroj+(brojka*brojac);
+        brojac*=10;
+    }
+    
+    return novibroj;
+}
+
+int main()
+{
+    int broj;
+    int brojac=0;
+    int pom;
+    
+    while(1==1)
+    {
+        printf("unesite broj:\n");
+        scanf("%d",&broj);
+        
+        pom=broj;
+        
+        while(pom>0)
+        {
+            pom/=10;
+            brojac++;
+        }
+        
+        if (brojac!=5)
+        {
+            brojac=0;
+            continue;
+        }
+        else if(brojac==5)
+            break;
+    }
+    
+    printf("novi broj je %d",uvecan(broj));
+
+}

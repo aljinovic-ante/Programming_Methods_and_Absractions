@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int funkcija(int dan, int misec, int godina)
+{
+    int prijestupna=0;
+    
+    if( (godina%4==0 && godina%100!=0) || godina%400==0 )  
+    {
+        prijestupna=1;
+    }
+    
+    
+    if(prijestupna)
+        {
+            if(misec==2)
+            {
+                if(dan>=1 && dan<=29)
+                    printf("validan - prijestupna");
+                else
+                    printf("nije validan");
+            }
+            else if(misec%2!=0 && misec>=1 && misec<=12 && misec!=2 && dan>=1 && dan<=31)
+                    printf("validan - prijestupna");
+            else if(misec%2==0 && misec>=1 && misec<=12 && misec!=2 && dan>=1 && dan<=30)
+                    printf("validan - prijestupna");
+            else
+                    printf("nije validan");
+        }
+    
+    else
+        {
+            if(misec==2)
+            {
+                if(dan>=1 && dan<=28)
+                    printf("validan - nije prijestupna");
+                else
+                    printf("nije validan");
+            }
+            else if(misec%2!=0 && misec>=1 && misec<=12 && misec!=2 && dan>=1 && dan<=31)
+                    printf("validan - nije prijestupna");
+            else if(misec%2==0 && misec>=1 && misec<=12 && misec!=2 && dan>=1 && dan<=30)
+                    printf("validan - nije prijestupna");
+            else
+                    printf("nije validan");
+        }
+    
+}
+
+int main()
+{
+    int dan,misec,godina;
+    
+    printf("unesi dan, misec, godinu:\n");
+    scanf("%d %d %d",&dan,&misec,&godina);
+    
+    funkcija(dan,misec,godina);
+    
+    return 0;
+}

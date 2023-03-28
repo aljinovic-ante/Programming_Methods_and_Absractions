@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    unsigned a;
+    printf("unesi broj:\n");
+    scanf("%d",&a);
+    int brojac=0;
+    
+    while(a>0)
+        {
+            a=a/10;
+            brojac++;
+            
+        }
+    
+    printf("%d", brojac);
+}

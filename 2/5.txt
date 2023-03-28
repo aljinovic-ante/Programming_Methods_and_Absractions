@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,n;
+    int i;
+    int suma=0;
+    printf("unesi interval:\n");
+    scanf("%d %d",&a,&b);
+    printf("Unesi n-ti broj:\n");
+    scanf("%d",&n);
+    
+    
+    for(i=a;i<=b;i=i+n)
+        {
+            suma=suma+i;
+        }
+    
+    suma=suma-1;
+    
+    printf("%d",suma);
+}

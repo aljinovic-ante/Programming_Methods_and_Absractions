@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int provjera(int broj)
+{
+    int brzn=0;
+    int kub=(broj*broj*broj);
+    int psuma=0;
+    int pbroj=1;
+    int staribroj=broj;
+    
+    
+    while(broj>0)
+    {
+        brzn++;
+        broj/=10;
+    }
+    
+    while(brzn>0)
+    {
+        psuma=psuma+((kub%10)*(pbroj));
+        pbroj=pbroj*10;
+        kub=kub/10;
+        brzn--;
+    }
+    
+    if (psuma==staribroj)
+        return 1;
+    else
+        return 0;
+    
+}
+
+int main()
+{
+    int broj;
+    int rez;
+    do
+    {
+        printf("unesite broj:\n");
+        scanf("%d",&broj);
+        rez=provjera(broj);
+        if (rez==1)
+        {
+            printf("broj %d je trimorfan\n",broj);
+        }
+        else
+            printf("broj %d nije trimorfan\n",broj);
+        
+        
+    }while(broj!=0);
+}

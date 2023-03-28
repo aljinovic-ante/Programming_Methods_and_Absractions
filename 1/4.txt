@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    int c,d;
+    int dg=0,gg=0;
+    
+    printf("unesite prvi interval:\n");
+    scanf("%d %d",&a,&b);
+    
+    printf("unesite drugi interval:\n");
+    scanf("%d %d",&c,&d);
+    
+    if (c<b && c>a)
+        {
+            dg=c;
+            if (d<b)
+                gg=d;
+            else
+                gg=b;
+        }
+    
+    if (d<b && d>a)
+        {
+            gg=d;
+            if (c<b)
+                dg=c;
+            else
+                dg=a;
+        }
+    
+    
+    printf("[%d,%d]",dg,gg);
+    
+    return 0;
+
+}

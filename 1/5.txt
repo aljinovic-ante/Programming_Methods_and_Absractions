@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int a,b;
+    int br1,br2;
+  
+    printf("unesite granice intervala:\n");
+    scanf("%d %d",&a,&b);
+    br1 = a + rand()%(b-a+1);
+    br2 = a + rand()%(b-a+1);
+    printf("%d i %d\n",br1,br2);
+    if (br1>br2)
+        printf("%d",br1);
+    else
+        printf("%d",br2);
+    
+    return 0;
+	
+}

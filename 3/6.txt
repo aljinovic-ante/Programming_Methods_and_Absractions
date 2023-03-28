@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int check(char c)
+{
+    if (c > 96 && c < 123)
+        return 1;
+    else if (c > 64 && c < 91)
+        return 2;
+    else if (c > 47 && c < 58)
+        return 3;
+    else
+        return 0;
+}
+
+int main()
+{
+    char znak;
+    int provjera;
+
+    do {
+
+        printf("unesi neki znak:\n");
+        scanf("%c", &znak);
+
+        provjera = check(znak);
+
+        switch (provjera) 
+        {
+        case 0: printf("ni slovo ni znamenka\n"); break;
+        case 1: printf("malo\n"); break;
+        case 2: printf("veliko\n"); break;
+        case 3: printf("broj\n"); break;
+        default: printf("greska\n"); break;
+        }
+
+    } while (znak != '.');
+}

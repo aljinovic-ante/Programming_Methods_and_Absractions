@@ -1,0 +1,38 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#define N 256
+
+/*5. * Napisati funkciju koja prima string i jedan znak i modificira string tako da odbaci
+sve znakove prije danog znaka.
+Primjer: Za string "ONoffON" i znak o, modificirani string je "offON".
+*/
+
+void funk(char str[],char znak)
+{
+	int i=0;
+
+	while (i < strlen(str))
+	{
+		if (str[i] == znak)
+		{
+			char* p = &str[i];
+			printf("string na p je %s\n", p);
+			str = strcpy(str, p);
+			break;
+		}
+		i++;
+	}
+
+}
+
+int main()
+{
+	char str[] = "ONoffON";
+	char znak = 'N';
+	funk(str,znak);
+	puts(str);
+	return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int racunaj(int);
+
+int main()
+{
+    unsigned a=12345;
+    
+    printf("%d",racunaj(a));
+}
+
+int racunaj(int a)
+{
+    int suma=0;
+    
+    while(a!=0)
+    {
+        a/=10;
+        suma++;
+    }
+    
+    return suma;
+}

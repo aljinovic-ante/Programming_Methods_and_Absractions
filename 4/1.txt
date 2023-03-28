@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+
+int funkcija(int n,int k)
+{
+   int broj=0;
+   int pot=0;
+   int mnoz=0;
+   int mnoz2=0;
+   int ostatak=0;
+   
+   while(broj<=n)
+   {
+       broj=0;
+       pot++;
+       broj=broj+(pow(k,pot));
+       if(broj>n)
+       {
+           broj=(pow(k,pot-1));
+           break;
+       }
+   }
+
+   mnoz=n/broj;
+   broj=n-(broj*mnoz);
+   
+   mnoz2=broj/k;
+   ostatak=broj-(mnoz2*k);
+
+   printf("%d=%d * %d**%d + %d * %d**1 + %d * %d**0\n", n,mnoz,k,pot-1,mnoz2,k, ostatak,k);
+  
+}
+
+int main()
+{
+    int n=200;
+    int k=8;
+    
+    funkcija(n,k);
+}

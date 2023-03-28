@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int funkcija(int a1,int d, int n)
+{
+    int i=a1;
+    int kraj= a1*n;
+    int brojac=0;
+    for(i;i<=kraj;i=i+d)
+    {
+        printf("%d\n",i);
+        brojac++;
+        if(brojac==n)
+            break;
+    }
+    
+    return i;
+}
+
+int main()
+{
+    int a1=10;
+    int d=5;
+    int n=3;
+    
+    printf("%d. clan je %d",n, funkcija(a1,d,n));
+}
